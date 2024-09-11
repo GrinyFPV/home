@@ -15,20 +15,20 @@ int f_turn(int int_inputValue)
 
 int main()
 {
-    unsigned int int_inputValue;
+    unsigned int int_readValue;
     printf("\nEnter a number: ");
-    scanf("%d", &int_inputValue);
+    scanf("%d", &int_readValue);
     printf("\n");
-    unsigned int int_reverseValue = f_turn(int_inputValue);
+    unsigned int int_reverseValue = f_turn(int_readValue);
 
-    while (int_inputValue != int_reverseValue)
+    while (int_readValue != int_reverseValue)
     {
-        printf("s %d + %d ->", int_inputValue, int_reverseValue);
-        int_inputValue = int_inputValue + int_reverseValue;
-        printf(" %d \n", int_inputValue);
-        int_reverseValue = f_turn(int_inputValue);
+        printf("s %d + %d ->", int_readValue, int_reverseValue);
+        int_readValue = int_readValue + int_reverseValue;
+        printf(" %d \n", int_readValue);
+        int_reverseValue = f_turn(int_readValue);
     }
 
-    printf("\nPalindrome: %d \n", int_inputValue);
+    printf("\nPalindrome: %d \n", int_readValue);
     return 0;
 }

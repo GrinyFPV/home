@@ -13,17 +13,17 @@ int f_turn(int int_inputValue)
 
 int main()
 {
-    unsigned int int_inputValue;
+    unsigned int int_readValue;
     printf("Enter a number: ");
-    scanf("%d", &int_inputValue);
-    unsigned int int_reverseValue = f_turn(int_inputValue);
+    scanf("%d", &int_readValue);
+    unsigned int int_reverseValue = f_turn(int_readValue);
 
-    while (int_inputValue != int_reverseValue)
+    while (int_readValue != int_reverseValue)
     {
-        int_inputValue = int_inputValue + int_reverseValue;
-        int_reverseValue = f_turn(int_inputValue);
+        int_readValue = int_readValue + int_reverseValue;
+        int_reverseValue = f_turn(int_readValue);
     }
 
-    printf("Palindrome: %d \n", int_inputValue);
+    printf("Palindrome: %d \n", int_readValue);
     return 0;
 }
